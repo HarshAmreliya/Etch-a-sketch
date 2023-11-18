@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:800');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Coda Caption', sans-serif;
     background-color: lightblue;
 }
 
-h1 {
+.title {
     text-align: center;
     font-size: 4.5rem;
     color: #333;
@@ -35,11 +37,17 @@ main {
 }
 
 .grid {
+    display: grid;
     background-color: whitesmoke;
     width: 40rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: grid;
 }
+
+.grid-element {
+    user-select: none;
+    background-color: #fefefe;
+  }
+  
 
 .color-selector {
     width: 6rem;
@@ -101,3 +109,8 @@ input[type="color"]::-webkit-color-swatch, input[type="color"]::-webkit-color-sw
     text-align: center;
     color: #333;
 }
+
+.active {
+    background-color: #333;
+    color: #ededed;
+  }

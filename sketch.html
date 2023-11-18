@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="sketch.css">
 </head>
 <body>
-    <h1>Etch-a-sketch</h1>
+    <div class="title">Etch-a-sketch</div>
     <main>
         <div class="side-bar">
-            <input class="color-selector" id="color-selector-el" type="color">
+            <input class="color-selector" id="color-selector-el" type="color" oninput="setCurrentColor()">
             <button class="side-bar-options" id="color-mode-el">Color mode</button>
             <button class="side-bar-options" id="rainbow-mode-el">Rainbow mode</button>
             <button class="side-bar-options" id="eraser-el">Eraser</button>
             <button class="side-bar-options" id="clear-el">Clear</button>
             <div class="container">
-                <label for="size-slider-el">16x16</label>
-                <input type="range" min="1" max="64" class="slider" id="size-slider-el" name = "size-slider-el" value="16">
+                <label id="size-slider-val" for="size-slider-el"></label>
+                <input type="range" min="1" max="64" class="slider" id="size-slider-el" name = "size-slider-el" step="1" value="16">
             </div>            
         </div>
-        <div class="grid">
+        <div class="grid" id="grid">
 
         </div>
+        <script src="sketch.js"></script>
     </main>
 </body>
 </html>
